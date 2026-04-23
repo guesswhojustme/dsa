@@ -19,3 +19,20 @@ function fiboRecur(num, m){
 }
 
 console.log(fiboRecur(0, 5));
+
+//Actual recursive (I wasnt able to solve)
+function fib(n) {
+    if (n <= 2) return 1;
+    return fib(n - 1) + fib(n - 2);
+}
+
+//Add to array
+function fibSequence(n) {
+    const arr = [];
+    for (let i = 1; i <= n; i++) {
+        arr.push(fib(i));
+    }
+    return arr;
+}
+
+console.log(fibSequence(5));
