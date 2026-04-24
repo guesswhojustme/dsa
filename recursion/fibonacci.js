@@ -20,6 +20,20 @@ function fiboRecur(num, m){
 
 console.log(fiboRecur(0, 5));
 
+//Cleaner version of fiboRecur()
+function fib(n, arr = [0, 1]) {
+    if (n <= 2) {
+        return arr.slice(0, n);
+    }
+
+    arr.push(arr[arr.length - 1] + arr[arr.length - 2]);
+
+    return fib(n - 1, arr);
+}
+
+console.log(fib(5));
+
+
 //Actual recursive (I wasnt able to solve)
 function fib(n) {
     if (n <= 2) return 1;
