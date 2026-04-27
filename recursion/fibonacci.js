@@ -8,14 +8,18 @@ function fibo(num){
 }
 console.log(fibo(8));
 
-const fiboArr = [0,1]
-function fiboRecur(m, num = 0){
-    if(num == (m - 3)){
+// const fiboArr = [];
+function fiboRecur(m, num = 0, fiboArr = []){
+    if(fiboArr == ''){
+        fiboArr.push(0)
+        fiboArr.push(1)
+    }
+    if(num == (m - 2)){
         fiboArr.push(fiboArr[num] + fiboArr[num + 1]);
         return fiboArr;
     }
     fiboArr.push(fiboArr[num] + fiboArr[num + 1]);
-    return fiboRecur(m, num + 1)
+    return fiboRecur(m, num + 1, fiboArr)
 }
 
 console.log(fiboRecur(5));
