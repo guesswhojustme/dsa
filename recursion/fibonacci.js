@@ -9,16 +9,16 @@ function fibo(num){
 console.log(fibo(8));
 
 const fiboArr = [0,1]
-function fiboRecur(num, m){
+function fiboRecur(m, num = 0){
     if(num == (m - 3)){
         fiboArr.push(fiboArr[num] + fiboArr[num + 1]);
         return fiboArr;
     }
     fiboArr.push(fiboArr[num] + fiboArr[num + 1]);
-    return fiboRecur(num + 1, m)
+    return fiboRecur(m, num + 1)
 }
 
-console.log(fiboRecur(0, 5));
+console.log(fiboRecur(5));
 
 //Cleaner version of fiboRecur()
 function fib(n, arr = [0, 1]) {
