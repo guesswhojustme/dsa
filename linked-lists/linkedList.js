@@ -122,18 +122,8 @@ class Node {
 }
 
 const list = new LinkedList();
-list.append("dog");
-list.prepend("cat");
-list.prepend("lion")
-list.append("tiger")
-list.append("bear")
-list.prepend("horse")
-list.headNode();
-list.tailNode();
-list.at(4);
-list.prepend("ling");
-list.append("ck")
-list.contains("bear");
-list.size();
-list.findIndex("tiger");
-list.toString();
+list.prepend("dog");
+list.append("cat");
+list.append("tiger");
+console.log(list.head);
+console.log(list.tail);
